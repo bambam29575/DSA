@@ -1,0 +1,129 @@
+#include <iostream>
+using namespace std;
+
+
+class animal{
+public:
+
+void show() {
+    cout << "Inside super class" << endl;
+}
+   int a, b;
+   int sum() {
+    return a+b;
+   }
+   void meow() {
+    cout << "Meow" << endl;
+   }
+   int meow(char name) {
+    cout << "Meow char" << endl;
+    
+   }
+   void meow(string name) {
+    cout << "Meow string" << endl;
+   }
+   void operator+(animal& obj) {
+    int value1 = this -> a;
+    int value2 = obj.a;
+    cout << "Difference is : " << value2 - value1 <<endl;
+   }
+   void operator() () {
+    int value1 = this -> a;
+    cout << value1 <<endl;
+   }
+}; 
+class subclass1 {
+    public:
+    void show () {
+    cout << "Inside sub class 1" << endl;
+    }
+};
+class subclass2 {
+    public:
+    void show () {
+    cout << "Inside sub class 2" << endl;
+}
+};
+
+
+class human: public animal, public subclass1 {
+    public:
+    int age;
+    int weight;
+    int height;
+
+
+    void getAge() {
+        cout << this->age;
+    }
+    int setWeight(int w) {
+        this->weight = w;
+        return this->weight;
+    }
+    void bark() {
+        cout << "Dog is barking" << endl;
+    }
+};
+class female {
+    public:
+    int marks;
+    void speak() {
+        cout << "Female speaking" << endl;
+    }
+//     void meow() {
+//     cout << "Meow" << endl;
+//    }
+};
+// class male:public human, public female, public animal {
+    
+// };
+    
+// class male: public human {
+
+//     // public:
+//     // string color;
+//     // void test() {
+//     //      cout << "Tested successfully" << endl;
+//     // }
+//     // void getAge() {
+//     //      this->age = age;
+//     //      cout << this->age;
+//     // }
+
+// };
+
+int main() {
+    animal object1, object2;
+    object1.a = 100;
+    object2.a = 20;
+    object2 + object1;
+    object2 ();
+    
+    animal object3;
+    subclass1 obj1;
+    subclass2 obj2;
+    obj1.show();
+    obj2.show();
+    object3.show();
+
+    human obj6;
+    obj6.animal::show();
+
+    // cout << object1.sum() << endl;
+    // object1.bark() ;
+    // cout << object1.marks << endl;
+
+    // object1.speak() ;
+    // object1.meow();
+    //object1.meow();
+    //object1.getAge();
+    // cout << object1.color << endl;
+    // cout << object1.height << endl;
+    // cout << object1.weight << endl;
+
+    // cout << object1.setWeight(64) << endl;
+    // cout << object1.weight << endl;
+    // object1.test();
+    
+    return 0;
+}
