@@ -9,7 +9,7 @@ class node
 public:
     int data;
     node *next;
-    node(int i) /*receives integer, finds out this(address) and put
+    node(int i) /*Parameterised constructor receives integer, finds out this(address) and put
      data in that address | Then set pointer block of its location to
      NULL*/
     {
