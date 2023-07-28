@@ -9,8 +9,9 @@ class node
 public:
     int data;
     node *next;
-    node(int i) /*Parameterised constructor receives integer, finds out this(address) and put
-     data in that address | Then set pointer block of its location to
+    node(int i) /*Parameterised constructor receives integer, finds
+    out this(address) and put data in that address | Then set
+    pointer block of its location to
      NULL*/
     {
         this->data = i;
@@ -135,6 +136,9 @@ int main()
     print(head);
 
     deleteNode(4, head); /*To delete node*/
+    cout << head << " " << head->next << endl;
+    cout << head->next->next << endl; /*head's next (2nd node) , again
+     2nd node's next (third node)*/
     cout << "Head " << head->data << endl;
     cout << "tail ``" << tail->data << endl;
 
