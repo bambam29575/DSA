@@ -118,8 +118,8 @@ int main()
     cout << node2->data << endl;
     cout << node2->next << endl;*/
 
-    node *head = node1; /*head is a pointer stores node1's address*/
-    node *tail = node1; /*tail is a pointer stores node1's address |
+    node *head = node1; /*head is a pointer stores address stored inside node1*/
+    node *tail = node1; /*tail is a pointer stores adress stored inside node1 |
      means node1,head, tail pointing to same node */
 
     print(head);
