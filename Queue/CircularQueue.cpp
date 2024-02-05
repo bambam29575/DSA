@@ -38,7 +38,8 @@ void enq(){
             cout << "full" << endl;
         }else{
             cout << "Item" << endl;
-            cin >> queue[++rear];
+            rear = (rear+1)%MAX;
+            cin >> queue[rear];
         }
         
     }
